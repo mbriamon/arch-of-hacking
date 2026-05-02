@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#
+# Add a new card into an existing deck.
+#
+
+# Parameters
+BASENAME="`basename $0`"
+DIRNAME="`dirname $0`"
+BASEDIR="$DIRNAME/.."
+DECK="$BASEDIR/decks/$1.yaml"
+
+# Card name
+shift
+NAME="$1"
+DESC="$2"
+
+# Parse
+if [ -z "$NAME" ]; then
+  echo "usage: $BASENAME <deck> \"Card Name\" \"Card Description\""
+  exit 1
+elif [ ! -e "$DECK" ]; then
+  echo "error: no such deck $DECK"
+  exit 1
+fi
+
+# Add new card
+grep -v -E '^#|(---$)' $BASEDIR/templates/cards.yaml |    \
+    sed -e "s|^- id:|- id: $($BASEDIR/bin/shortuuidgen)|" \
+        -e "s|^  name:|  name: $NAME|"                    \
+        -e "s|^  description:|  description: $DESC|" >> $DECK|| exit 1
+
+# Inform user
+echo "Card '$NAME' added into $DECK"

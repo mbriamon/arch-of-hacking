@@ -1,0 +1,19 @@
+## Template for A3 page size
+\documentclass[a3paper,landscape]{article}
+\usepackage[margin=0mm,top=0mm]{geometry}
+
+#include "templates/tex/snippets/deps.template"
+
+\begin{document}
+\begin{center}
+  \pagestyle{empty}
+  #for $card in $cards
+    #if $card.name != None
+      \trimmedbox{
+      #set global $card = $card
+      #include "templates/tex/snippets/card.template"
+      }
+    #end if
+  #end for
+\end{center}
+\end{document}

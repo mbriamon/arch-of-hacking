@@ -1,0 +1,21 @@
+## Template for A4 page size
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0mm,top=0mm]{geometry}
+
+## Dependencies
+#include "templates/tex/snippets/deps.template"
+
+## Variables
+#set $cards = range(0, 8)
+
+\begin{document}
+\begin{center}
+  \pagestyle{empty}
+  #for $card in $cards
+    \trimmedbox{
+      #include "templates/tex/snippets/back.template"
+    }
+  #end for
+\end{center}
+\cutmarksAFour
+\end{document}

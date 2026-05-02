@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+#
+# Simple card counter.
+#
+# Copyright (C) 2015 Fujiro Nakombi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published
+# by the Free Software Foundation, either version 3 of the License,
+# or any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Parameters
+BASENAME="`basename $0`"
+DIRNAME="`dirname $0`"
+BASEDIR="`cd $DIRNAME/.. &> /dev/null && pwd`"
+DECKS="$BASEDIR/decks"
+DECK="$1"
+LANGS="`ls $DECKS`"
+CARDS_PER_PAGE="8"
+
+# Base grep query
+function grep_cmd {
+  grep -R '^- id: ' $1
+}
+
+# Query modifier to exclude cards in development
+function exclude_develop {
+  grep -v develop
+}
+
+# Query modifier to exclude aggregated decks
+function exclude_aggregate_decks {
+  grep -v tudo.yaml | grep -v all.yaml | grep -v full.yaml
+}
+
+# Display the number of A4 pages in a deck
+function count_pages {
+  local total_cards="$1"
+  local full_pages="$(($total_cards / $CARDS_PER_PAGE))"
+  local remainder="$(($total_cards % $CARDS_PER_PAGE))"
+
+  if [ "$remainder" != "0" ]; then
+    local next_pages="$((full_pages + 1))"
+    local next_total="$((next_pages * $CARDS_PER_PAGE))"
+    local needed_cards="$((next_total - $total_cards))"
+
+    echo "$full_pages,$remainder full A4 pages, needs $needed_cards to complete all A4 pages"
+  else
+    echo "$full_pages A4 pages"
+  fi
+}
+
+# Header
+git log -1 --oneline
+echo ""
+
+# Single deck is requested
+if [ ! -z "$DECK" ]; then
+  if [ ! -e "$DECKS/$DECK.yaml" ]; then
+    echo "$BASENAME: file not found: $DECKS/$DECK.yaml"
+    exit 1
+  else
+    count="`grep_cmd $DECKS/$DECK.yaml | wc -l`"
+    echo "In $DECK:"
+    echo ""
+    echo "  * Total cards: $count (`count_pages $count`)"
+    echo ""
+    exit
+  fi
+fi
+
+# Count over all decks
+for lang in $LANGS; do
+  echo "In $lang:"
+  echo ""
+
+  echo -n "  * Everything: "
+  count="`grep_cmd decks/$lang | exclude_aggregate_decks | wc -l`"
+  echo "$count (`count_pages $count`)"
+
+  if [ -d "$DECKS/$lang/develop" ]; then
+    echo -n "  * Under development: "
+    count="`grep_cmd decks/$lang/develop/ | wc -l`"
+    echo "$count (`count_pages $count`)"
+  fi
+
+  echo -n "  * Completed cards (not in development): "
+  count="`grep_cmd decks/$lang | exclude_aggregate_decks | exclude_develop | wc -l`"
+  echo "$count (`count_pages $count`):"
+
+  # Per-deck count
+  for deck in decks/$lang/*; do
+    # Exclude folders
+    if [ -d "$deck" ]; then
+      continue
+    fi
+
+    # Exclude compiled decks
+    if [ "$deck" == "decks/$lang/tudo.yaml" ] ||
+       [ "$deck" == "decks/$lang/all.yaml" ]; then
+      continue
+    fi
+
+    echo -n "    * In $deck: "
+    count="`grep_cmd $deck | wc -l`"
+    echo "$count (`count_pages $count`)"
+  done
+
+  echo ""
+done

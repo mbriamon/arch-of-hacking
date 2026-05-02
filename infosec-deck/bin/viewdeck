@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# Wrapper to view a deck.
+#
+
+# Parameters
+DIRNAME="`dirname $0`"
+DECK="$1"
+
+# Parse
+if [ -z "$DECK" ]; then
+  DECK="pt-br/develop"
+fi
+
+# Dispatch
+zathura $DIRNAME/../out/pdf/$DECK.pdf &> /dev/null &

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#
+# Convert downloaded images into thumbnails.
+#
+
+# Parameters
+DIRNAME="`dirname $0`"
+BASEDIR="$DIRNAME/.."
+IMGDIR="$BASEDIR/tex/img"
+THUMBDIR="$BASEDIR/out/images/thumbs/"
+
+# Ensure thumb folder exists
+mkdir -p $THUMBDIR
+
+# Iterate over all images
+for file in `ls $IMGDIR`; do
+  # Exclude folders
+  if [ -f "$IMGDIR/$file" ]; then
+    # Convert only new images
+    if [ ! -f "$THUMBDIR/$file" ]; then
+      echo "Processing $file..."
+      convert -resize "400x" $IMGDIR/$file $THUMBDIR/$file
+    fi
+  fi
+done

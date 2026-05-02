@@ -1,0 +1,18 @@
+          \begin{tikzpicture}
+              % Card background - white
+              \path[cardcorners, fill=white] \shapeCard;
+              
+              #set $border = $getVar('border', 1)
+              #if $border != 0
+              \cardborder
+              #end if
+              
+              % Skull image
+              \node at (3, 5) {\includegraphics[width=3cm]{../doc/images/skull.pdf}};
+              
+              % Title text in sans-serif
+              \node[font=\sffamily\Huge\bfseries, text=black] at (3, 2.5) {INFOSEC};
+              \node[font=\sffamily\Huge\bfseries, text=black] at (3, 1.5) {DECK};
+              
+              \cardversion
+          \end{tikzpicture}

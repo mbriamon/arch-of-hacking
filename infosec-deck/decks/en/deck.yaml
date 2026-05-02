@@ -1,0 +1,269 @@
+---
+#
+# Infosec Deck: Mary's Edition 
+# License: Creative Commons BY-CC-SA
+#
+# There are 4 card types:
+# - Assets
+# - Attack
+# - Defense (mitigation)
+# - Skill
+#  
+#  Please observe:
+#  You can use any name, category, image, etc.
+#  Do not forget to add the image credits
+#  Do not use AI-generated images, plz
+#
+#  Add yourself to AUTHORS, if you want credit
+#  for the cards you added
+#
+- id: ERCbGHsQUDcR7qvSSFd6tH
+  name: The Prophet
+  type: Attack
+  category: ATK 8, DEF 7
+  #url: test
+  description: 'WARRIOR / LEGENDARY
+  
+              Requires 1 Tribute. Once per game: Target 2 Technique cards in your discard pile and add it to your hand.'
+  image: https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/9BC9/production/_86718893_hi030155725.jpg
+  image credits: Wikimedia Commons
+  #image info: http://openbsd.org
+  value: 5
+  #notes: 'Warrior / Legendary'
+
+- id: KEQgmhQWyua6XyECn4JYEv
+  name: Electronic Disturbance Theater
+  type: Attack 
+  category: ATK 7, DEF 3 
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                A hacktivist collective utilizing cyber attacks to execute mass political mobilization and disript institutional servers.'
+  image: https://hammer.ucla.edu/sites/default/files/styles/hero_r_small/public/migrated-assets/media/programs/2019/Summer_2019/cult-of-the-dead-cow.jpg?itok=awmYQ72J
+  image credits: Wikimedia Commons
+  #image info: http://www.nytimes.com/2011/05/08/world/asia/08binladen.html?_r=2&pagewanted=all
+  value: 4
+  #notes: test
+
+- id: TqC4CEDoHhg9c3TtDr7Kc3
+  name: ColdFire
+  type: Attack
+  category: ATK 5, DEF 2
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                A relentless black-hat hacker driven by unrestricted access who has compromised over a hundred mainframes.'
+  image: https://blogadmin.detectify.com/app/uploads/2018/03/malicious_hat_hacker.png
+  image credits: Wikimedia Commons
+  #image info: http://www.wideweb.com/phonetrips/
+  value: 3
+  #notes: test
+
+- id: ReC2YysUS9AduxeChRcM23
+  name: Smashing the Stack for Fun and Profit 
+  type: Skill
+  category: ATK N/A, DEF N/A 
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Destroy the opposing warrior with the lowest COV on the field.'
+  image: https://delinea.com/hs-fs/hubfs/passwd-file.png?width=750&name=passwd-file.png
+  image credits: Wikimedia Commons
+  #image info: https://flic.kr/p/3gkCgA
+  value: 2
+  #notes: test
+
+- id: Dw3hb5Q3M4D3QFTZC9FDRr
+  name: ISP Breach
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Target 1 warrior in either player discard pile and special summon it to your side of the field.'
+  image: https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/05/051724_system_hack.jpg
+  image credits: Wikimedia Commons
+  #image info: https://flic.kr/p/3gkCgA
+  value: 3
+  #notes: test
+
+- id: H5espgm8FwUDh7DfTDXEBb
+  name: Digital Sit-In
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Opposing warriors cannot declare an attack for 3 of your opponent turns.'
+  image: https://www.metacompliance.com/wp-content/uploads/2025/06/5-less-obvious-hacking-methods-you-should-be-aware-of.jpg
+  image credits: Wikimedia Commons
+  #image info: https://openclipart.org/detail/194160/football-referees-whistle
+  value: 3
+  #notes: test
+
+- id: beRVg6bcEJ3bVEYnALXAkT
+  name: Phrack Publication 48
+  type: Defense
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+                
+                When your warrior is destroyed search your deck for 1 warrior with 3 or less IMP and add it to your hand.'
+  image: https://phrack.org/images/p40ylogo.png
+  image credits: Wikimedia Commons
+  #image info: https://flic.kr/p/3gkCgA
+  value: 1
+  #notes: test
+
+- id: JvkCvxZfAsshMjrdjLnFtQ
+  name: MOLOCH Collective no stop
+  type: Defense 
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+                
+                When an opponent warrior declares an attack, negate the attack and inflict LP damage to your opponent equal to the attacking warrior IMP.'
+  image: https://www.avast.com/hs-fs/hubfs/New_Avast_Academy/what_is_ethical_hacking_academy/What-is-Ethical-Hacking-01.png?width=1320&height=600&name=What-is-Ethical-Hacking-01.png
+  image credits: Wikimedia Commons
+  #image info: https://flic.kr/p/3gkCgA
+  value: 3
+  #notes: test
+
+- id: QprJgLgz5njeXQZWZ4GqRb
+  name: The Grey-Hat Transition
+  type: Defense
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+  
+                Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position.'
+  image: https://meta-wp-uploads.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/11/10082155/redteam-05.png
+  image credits: Wikimedia Commons
+  value: 2
+  #notes: test
+
+- id: P3Eek4rJKAMFZff6JCg7BM
+  name: Peter Thiel
+  type: Attack
+  category: ATK 8, DEF 6
+  #url: test
+  description: 'WARRIOR / LEGENDARY 
+  
+                Requires 1 Tribute. Once per game: Reveal all face-down Defense cards on your opponent field and destroy them.'
+  image: https://spectator.com/wp-content/uploads/2025/12/thiel_inside_colour_002.jpg?w=1347 
+  #image info: https://www.flickr.com/photos/andertoons-cartoons/2857238260/
+  image credits: Wikimedia Commons
+  value: 5
+  #notes: test
+
+- id: TrKCYuKkcRpmT3Uc5UJMCZ
+  name: Palantir Monitoring System 
+  type: Attack
+  category: ATK 7, DEF 4 
+ #url: test
+  description: 'WARRIOR / NORMAL
+                
+                An industrial-scale data aggregation entitiy executing mass social engineering to consolidate institutional power.'
+  image: https://www.palantir.com/assets/xrfr7uokpv1b/3T5hPp4lou3SNh7oc68fhj/d0b5e5d4b8019326b7cfb1b58691f477/Asset_2AIP_copy_2.png?quality=70&width=1600&height=712&fit=crop 
+  image credits: Wikimedia Commons
+  #image info: https://en.wikipedia.org/wiki/Telephone_tapping#/media/File:This_Phone_Is_Tapped.jpg
+  value: 4
+  #notes: test
+
+- id: h3CdRQJagLyvAZ3kguYgZ8
+  name: Edward Bernays
+  type: Attack
+  category: ATK 5, DEF 3 
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                The pioneer of mass manipulation who utilized pscyhological techniques to direct public discourse and behavior.'
+  image: https://upload.wikimedia.org/wikipedia/commons/6/61/Edward_Bernays_cropped.png 
+  image credits: Wikimedia Commons
+  #image info: http://www.fadedindustry.com/monster-the-kali-muscle-story/
+  value: 2
+  #notes: test
+
+- id: fvLPjcHRh3L94WPAvzHAWm
+  name: Pegasus Spyware
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Destroy the opposing warrior with the highest COV on the field.'
+  image: https://s2.elespanol.com/2022/05/02/omicrono/software/669443349_223996864_1706x960.jpg 
+  image credits: Wikimedia Commons
+  #image info: https://commons.wikimedia.org/wiki/File:Darren_in_dumpster_6.jpg
+  value: 2
+  #notes: test
+
+- id: TZ9rg8nGyvjLeA96AAeeS4
+  name: Mass Social Engineering
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: tests
+  description: 'TECHNIQUE / SPELL
+  
+                Draw 2 cards.'
+  image: https://www.pngkey.com/png/detail/938-9387485_social-engineering-logo-png.png 
+  image credits: Wikimedia Commons
+  #image info: https://commons.wikimedia.org/wiki/File:Darren_in_dumpster_6.jpg
+  value: 2
+  #notes: test
+
+- id: 6VcdZovnZxG3pusrp5meep
+  name: Targeted Ad Generation 
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Target 1 Upright warrior on the field and switch it to Sideways mode.'
+  image: https://www.marketingevolution.com/hubfs/iStock-1468369907.jpg
+  image credits: Wikimedia Commons
+  #image info: http://victorypi.com/services/computer-forensics-deleted-data-recovery/
+  value: 1
+  #notes: test
+
+- id: 7HmmygR2sdGxG3k3tR9yiC
+  name: Evening with Berferd
+  type: Defense
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+  
+                When your opponent summons a warrior with 4 or more IMP, target that warrior and destroy it.'
+  image: https://images.stockcake.com/public/7/7/0/7704c2b8-c503-464a-b920-655ea4e2aae5_large/cyberpunk-hacking-scene-stockcake.jpg
+  image credits: Wikimedia Commons
+  #image info: https://openclipart.org/detail/181904/prism-logo
+  value: 2
+  #notes: test
+
+- id: HRaU8Kj72AuMX2qQ4uikHR
+  name: Gell's Enchantment 
+  type: Defense
+  category: ATK N/A, DEF N/A
+  url: test
+  description: 'EVENT / TRAP
+  
+                Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position or declare an attack.'
+  image: https://thumbs.dreamstime.com/b/gadget-enchantment-delving-world-technological-sorcery-imagine-enchanting-scene-where-advanced-technology-intertwines-291714824.jpg
+  image credits: tests
+  #image info: http://www.lcscss.com/oc-restaurants-cited-for-vermin-infestation/
+  value: 2
+  notes: test
+
+- id: 4QETj8x5wcpTzqug6VWAJx
+  name: Censorship
+  type: Defense
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+  
+                When an opponent warrior attacks, negate the attack and reduce ATK of all opposing warriors to 0.'
+  image: https://s3.amazonaws.com/global-db-public/global-db-public/event/image/22501/censorship.jpeg
+  image credits: Wikimedia Commons
+  #image info: https://en.wikipedia.org/wiki/Keystroke_logging#/media/File:Keylogger-hardware-PS2-example-connected.jpg
+  value: 0
+  #notes: test

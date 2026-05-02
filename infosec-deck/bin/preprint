@@ -1,0 +1,65 @@
+#!/bin/bash
+#
+# Prepare the PDF of a deck for printing.
+#
+# This may involve things like adding card back and changing page size.
+#
+# Based on scripts from
+#
+#   http://stackoverflow.com/questions/12942486/insert-a-blank-page-between-each-existing-page-in-a-pdf-document#13412740
+#   https://github.com/pdfjam/pdfjam-extras/blob/master/bin/pdfnup
+#
+# which is available under CC BY-SA 3.0
+#
+# Other interesting references on PDF merging:
+#
+#   http://www.pdfsam.org/mix-pdf/
+#   http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/
+#   https://superuser.com/questions/516612/merge-two-pdf-files-containing-even-and-odd-pages-of-a-book
+
+# Parameters
+BASENAME="`basename $0`"
+DIRNAME="`dirname $0`"
+BACK="$DIRNAME/../out/pdf/back.pdf"
+PDF="$1"
+PDFNUP="pdfjam --suffix nup --nup 2x1 --landscape"
+
+if [ $# -ne 1 ]; then
+  echo "usage: $BASENAME <pdfile>"
+  exit 1
+elif [ ! -e "$PDF" ]; then
+  echo "file not found: $PDF"
+  exit 1
+else
+  PDF_BASE="`basename $PDF`"
+  PDF_DIR="`dirname $PDF`"
+  OUT_DIR="$PDF_DIR/print"
+  NUM=$(pdftk $PDF dump_data | grep 'NumberOfPages' | awk '{split($0,a,": "); print a[2]}')
+  COMMSTR=''
+
+  for i in $(seq 1 $NUM); do
+    COMMSTR="$COMMSTR A$i B1 "
+  done
+
+  mkdir -p $OUT_DIR
+
+  # Generates a blank PDF
+  # This is not needed anymore
+  #echo "" | ps2pdf -sPAPERSIZE=a4 - blank.pdf
+
+  # Merge PDFs
+  # This layout is not being used
+  #echo "Merging $PDF with $BACK..."
+  #pdftk A=$PDF B=$BACK cat $COMMSTR output $OUT_DIR/'portrait_'$PDF_BASE &> /dev/null
+
+  # Create the landscape version
+  # This layout is not being used
+  #echo "Creating a landscape PDF for $PDF..."
+  #$PDFNUP $OUT_DIR/'portrait_'$PDF_BASE --outfile $OUT_DIR/'landscape_'$PDF_BASE &> /dev/null
+
+  # Removes any existing blank pdf
+  #rm -f blank.pdf
+
+  # Removes any existing intermediary pdf
+  #rm -f 'mod_'$PDF
+fi

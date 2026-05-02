@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#
+# Process single deck at en/deck.yaml
+#
+
+# Parameters
+BASENAME="`basename $0`"
+DIRNAME="`dirname $0`"
+BASEDIR="$DIRNAME/.."
+DECKS="$BASEDIR/decks"
+DECK="en/deck.yaml"
+
+# Hello to user
+echo "Processing deck $DECK..."
+
+# Check if the deck exists
+if [ ! -f "$DECKS/$DECK" ]; then
+  echo "Error: Deck not found at $DECKS/$DECK"
+  exit 1
+fi
+
+echo "Done."

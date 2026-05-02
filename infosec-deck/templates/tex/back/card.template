@@ -1,0 +1,15 @@
+## Template for a single card page size
+\documentclass{article}
+\usepackage[paperheight=8.8cm,paperwidth=6cm,margin=0mm,top=0mm]{geometry}
+
+## Dependencies
+#include "templates/tex/snippets/deps.template"
+
+\begin{document}
+\begin{center}
+  \pagestyle{empty}
+  #set global $border = 0
+  #include "templates/tex/snippets/back.template"
+\end{center}
+\cutmarksCard
+\end{document}

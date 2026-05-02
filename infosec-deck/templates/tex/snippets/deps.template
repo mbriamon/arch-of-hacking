@@ -1,0 +1,7 @@
+#if $set != 'en'
+\usepackage[portuguese]{babel}
+#end if
+
+\input{include/libs.tex}
+\input{include/colors.tex}
+\input{include/themes/default-tcolorbox.tex}

@@ -1,0 +1,27 @@
+# License Information
+
+This project is a fork of the original card game repository provided 
+by the University of Notre Dame course CSE 40842 (Archeology of Hacking).
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+Copyright (C) 2025 Mary Briamonte
+
+Because this project is a derivative work of a GPL-3.0 licensed repository, 
+it must remain under the same license. The full license text can be found 
+in the LICENSE file included in this repository.
+
+## What this means
+
+- ✅ You are free to use, study, and modify this code
+- ✅ You are free to redistribute this project
+- ❌ You may NOT make this code proprietary or closed source
+- ❌ Any derivative works must also be licensed under GPL-3.0
+- ℹ️ Attribution to the original authors must be maintained
+
+## Original Repository
+
+The original project was provided by the instructors of CSE 40842 
+at the University of Notre Dame.

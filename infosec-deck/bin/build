@@ -1,0 +1,368 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Builds a deck of cards from a YAML source and LaTeX templates.
+#
+# Copyright (C) 2015 Fujiro Nakombi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published
+# by the Free Software Foundation, either version 3 of the License,
+# or any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Dependencies
+import yaml
+import operator, decimal
+import unidecode, string, hashlib
+import sys, os, subprocess, pycurl
+
+from Cheetah.Template import Template
+from shutil import copyfile
+
+# Unsupported image extensions
+unsupported_image_extensions = [ '.webp', '.gif', '.bmp', '.avif' ]
+
+class CardBase():
+  def buildOutputs(self):
+    # Iterate over all existing layouts
+    for parent, dirs, files in os.walk(os.path.join('templates', 'tex' , 'layouts')):
+       for file in files:
+         layout = file.replace('.template', '')
+
+         self.buildPDF(layout=layout)
+
+class CardGame(CardBase):
+  """A CardGame class"""
+
+  def __init__(self, collection):
+    if collection.lower().endswith('.yaml'):
+      collection = collection[:-5]
+
+    data            = open('decks/' + collection + '.yaml', 'r')
+    self.cards      = yaml.load(data, yaml.CLoader)
+    self.stats      = { 'body count': 0 }
+    self.collection = collection
+    self.deckSet    = collection.split('/')[0]
+
+  def getOutputName(self, layout, outputN, totalDocs):
+      parts = self.collection.split('/')
+      name  = parts[1] + '-' + str(outputN).zfill(decimal.Decimal(totalDocs).as_tuple().exponent)
+
+      return os.path.join(parts[0], layout, name)
+
+  def getFileExtension(self, name):
+    name                     = name.split('?')[0]
+    filename, file_extension = os.path.splitext(name)
+    file_extension           = file_extension.lower()
+
+    return file_extension
+
+  # Changes here should also be synced with the JavaScript code
+  def normalizedImageName(self, url, extension = '', handle_unsupported = True):
+    file_extension = self.getFileExtension(url) if extension == '' else extension
+
+    # Handle unsupported extensions
+    if handle_unsupported and file_extension in unsupported_image_extensions:
+        file_extension = '.jpg'
+
+    # Normalize image file name
+    hash = hashlib.sha1()
+    hash.update(url.encode('utf-8'))
+    normalized_name = hash.hexdigest() + file_extension
+
+    return normalized_name
+
+  # Thanks http://pycurl.io/docs/latest/quickstart.html#writing-to-a-file
+  def getFile(self, url, extension = ''):
+    final_name = self.normalizedImageName(url, extension)
+    final_path = os.path.join('tex/img', final_name)
+
+    if os.path.isfile(final_path):
+        #print('Using image ' + final_path + '...')
+        return final_name
+
+    print('Downloading image ' + url + ' into ' + final_path + '...')
+
+    # Handle unsupported extensions
+    if final_name != self.normalizedImageName(url, extension, handle_unsupported = False):
+        downloaded_path = os.path.join('tex/img', os.path.basename(url))
+    else:
+        downloaded_path = final_path
+
+    # Handle WAF firewall blocking
+    # https://stackoverflow.com/questions/73982924/error-with-pycurl-when-sending-a-get-request-1010#75118853
+    custom_headers = ['User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0/8mqLkJuL-86']
+
+    try:
+      with open(downloaded_path, 'wb') as f:
+        c = pycurl.Curl()
+        c.setopt(c.URL, url)
+        c.setopt(c.WRITEDATA, f)
+        # Disable Tor proxy for single-deck setup
+        # c.setopt(c.PROXY, 'socks5://localhost:9050')
+        c.setopt(pycurl.HTTPHEADER, custom_headers)
+        c.perform()
+        response_code = c.getinfo(pycurl.RESPONSE_CODE)
+        c.close()
+
+      # Check if download was successful
+      if response_code >= 400:
+        print('Warning: HTTP error ' + str(response_code) + ' downloading ' + url)
+        if os.path.exists(downloaded_path):
+          os.remove(downloaded_path)
+        return None
+
+      # Check if file is actually an image (not HTML error page)
+      if os.path.getsize(downloaded_path) < 1000:
+        with open(downloaded_path, 'rb') as f:
+          header = f.read(100)
+          if b'<html' in header.lower() or b'<!doctype' in header.lower():
+            print('Warning: Downloaded HTML instead of image from ' + url)
+            os.remove(downloaded_path)
+            return None
+
+      # Convert images with unsupported extensions
+      if final_name != self.normalizedImageName(url, extension, handle_unsupported = False):
+          subprocess.call('convert {downloaded_path} {final_path}'.format(
+              downloaded_path = downloaded_path,
+              final_path      = final_path,
+              ), shell=True)
+
+      return final_name
+    except Exception as e:
+      print('Warning: Failed to download image from ' + url + ': ' + str(e))
+      print('Using fallback image instead')
+      # Clean up failed download
+      if os.path.exists(downloaded_path):
+        os.remove(downloaded_path)
+      # Return None to signal that we should use the sample image
+      return None
+
+  def processDeck(self):
+    self.stats['total'] = 0
+
+    for card in self.cards:
+      # Ensure the "image extension" field
+      if 'image extension' not in card:
+          card['image extension'] = ''
+
+      # Retrieve and set image path
+      if 'image' in card and card['image'] != None:
+        image_file = self.getFile(card['image'], card['image extension'])
+        if image_file is not None:
+          card['image'] = os.path.join('img', image_file)
+        else:
+          card['image'] = 'img/sample.png'
+          if 'missing_image' in self.stats:
+            self.stats['missing_image'] += 1
+          else:
+            self.stats['missing_image'] = 1
+      else:
+        card['image'] = 'img/sample.png'
+
+        if 'missing_image' in self.stats:
+          self.stats['missing_image'] += 1
+        else:
+          self.stats['missing_image'] = 1
+
+      if card['type'] != None:
+        #card['type'] = unidecode.unidecode(card['type'])
+
+        if card['type'] in self.stats:
+          self.stats[card['type']] += 1
+        else:
+          self.stats[card['type']] = 1
+
+      if card['name'] != None:
+        # Make sure its a string
+        card['name'] = str(card['name'])
+        card['name'] = card['name'][0].upper() + card['name'][1:]
+
+      if card['description'] != None and card['description'] != '':
+        card['description'] = card['description'][0].upper() + card['description'][1:]
+
+      self.stats['total'] += 1
+
+    # Sort by type
+    self.cards = sorted(self.cards, key=operator.itemgetter('type'))
+
+  def buildPDF(self, layout = 'a4'):
+    # The current template
+    template = open(os.path.join('templates', 'tex', 'layouts', layout + '.template'), "r")
+
+    # Max cards per page
+    cardsPerPage = {
+            'card':  1,
+            'a4'  :  8,
+            'a3'  : 18,
+            }
+
+    # Max pages per PDF build
+    pagesPerDoc  = {
+            'card': 150,
+            'a4'  :  15,
+            'a3'  :   8,
+            }
+
+    # Limit for current PDF build, ensuring all pages are filled
+    cardsPerDoc = cardsPerPage[layout] * pagesPerDoc[layout]
+
+    # Invocation for pdfjam
+    #
+    # Note that the olde "pdfjoin" wrapper is gone:
+    # https://bugs-devel.debian.org/cgi-bin/bugreport.cgi?bug=1011759
+    # https://github.com/pdfjam/pdfjam
+    # https://github.com/pdfjam/pdfjam-extras/blob/master/bin/pdfjoin
+    #pdfjoin = 'pdfjoin '
+    pdfjoin  = 'pdfjam --fitpaper true --rotateoversize true --suffix joined '
+
+    # Determine the number of documents
+    if self.stats['total'] <= cardsPerDoc:
+      totalDocs = 1
+    else:
+      totalDocs = self.stats['total'] / cardsPerDoc
+
+      if self.stats['total'] % cardsPerDoc != 0:
+        totalDocs += 1
+
+    # Compile LaTeX output
+    for outputN in range(0, int(totalDocs)):
+      outputName = self.getOutputName(layout, outputN, totalDocs)
+      start      = outputN * cardsPerDoc
+      end        = start   + cardsPerDoc
+
+      if end > self.stats['total']:
+        end = None
+
+      # Compile template
+      #print('Compiling LaTeX source for ' + outputName + '...')
+      template.seek(0)
+      compiled = Template.compile(str(template.read()), baseclass=dict)
+      tex      = compiled(cards=self.cards[start:end], set=self.deckSet)
+
+      # TeX folder
+      texFile   = os.path.join('decks', outputName + '.tex')
+      texFolder = os.path.dirname(os.path.join('tex', texFile))
+      if not os.path.isdir(texFolder):
+        os.makedirs(texFolder)
+
+      # Write LaTeX output
+      output = open(os.path.join('tex', texFile), 'w')
+      output.write(str(tex))
+      output.close()
+
+      # Output folder
+      outputFolder = os.path.dirname(os.path.join('out', 'pdf', outputName))
+      if not os.path.isdir(outputFolder):
+        os.makedirs(outputFolder)
+
+      # Compile PDF
+      print('Building PDF for ' + outputName + ' ...')
+      os.chdir('tex')
+      cmd = 'TZ=GMT-3 pdflatex -output-directory ../' + outputFolder + ' -interaction batchmode ' + texFile
+      result = subprocess.call(cmd, shell=True)
+      if result != 0:
+        print('Warning: pdflatex returned error code ' + str(result))
+      os.chdir('..')
+
+      pdfjoin += os.path.basename(outputName) + '.pdf '
+
+    # Join PDFs
+    print('Building ' + self.collection + '.pdf (layout: ' + layout + ')...')
+    os.chdir(outputFolder)
+    subprocess.call(pdfjoin + '--outfile ' + os.path.basename(self.collection) + '.pdf > /dev/null 2>&1', shell=True)
+
+    # Remove intermediate files
+    for outputN in range(0, int(totalDocs)):
+      outputName = self.getOutputName(layout, outputN, totalDocs)
+      for ext in ['.pdf', '.aux', '.log']:
+        filepath = os.path.basename(outputName) + ext
+        if os.path.exists(filepath):
+          os.remove(filepath)
+
+    # Return to main folder
+    os.chdir('../../../..')
+
+class CardBack(CardBase):
+  def getOutputName(self, layout, deckSet):
+      return os.path.join(deckSet, layout, 'back')
+
+  def buildPDF(self, layout):
+    for deckSet in os.listdir(os.path.join('decks')):
+      self.buildPDFdeckSet(layout, deckSet)
+
+  def buildPDFdeckSet(self, layout, deckSet):
+    template   = open(os.path.join('templates', 'tex', 'back', layout + '.template'), "r")
+    outputName = self.getOutputName(layout, deckSet)
+
+    # Compile template
+    #print('Compiling LaTeX source for ' + outputName + '...')
+    template.seek(0)
+    compiled = Template.compile(str(template.read()), baseclass=dict)
+    tex      = compiled(deckSet=deckSet)
+
+    # TeX folder
+    texFile   = os.path.join('back', outputName + '.tex')
+    texFolder = os.path.dirname(os.path.join('tex', texFile))
+    if not os.path.isdir(texFolder):
+      os.makedirs(texFolder)
+
+    # Write LaTeX output
+    output = open(os.path.join('tex', texFile), 'w')
+    output.write(str(tex))
+    output.close()
+
+    print('Building back PDF (set: ' + deckSet + ', layout: ' + layout + ')...')
+
+    # Output folder
+    outputFolder = os.path.dirname(os.path.join('out', 'pdf', outputName))
+    if not os.path.isdir(outputFolder):
+      os.makedirs(outputFolder)
+
+    # Compile PDF
+    #print('Building PDF for ' + outputName + ' ...')
+    os.chdir('tex')
+    cmd = 'TZ=GMT-3 pdflatex -output-directory ../' + outputFolder + ' -interaction batchmode ' + texFile + ' > /dev/null'
+    subprocess.call(cmd, shell=True)
+    os.chdir('..')
+
+    # Remove intermediate files
+    os.remove(os.path.join('out', 'pdf', outputName + '.aux'))
+    os.remove(os.path.join('out', 'pdf', outputName + '.log'))
+
+def buildCards():
+  print('Loading ' + collection + ' deck...')
+  deck = CardGame(collection)
+
+  print('Iterating over all ' + collection + ' cards...')
+  deck.processDeck()
+
+  print('Compiling ' + collection + ' deck...')
+  deck.buildOutputs()
+
+  # Teardown
+  print('Statistics for ' + collection + ': ' + str(deck.stats))
+
+def buildBack():
+  back = CardBack()
+
+  back.buildOutputs()
+
+if __name__ == "__main__":
+  if len(sys.argv) == 2:
+    collection = sys.argv[1]
+  else:
+    collection = 'en/basic'
+
+  if collection == 'back':
+    buildBack()
+  else:
+    buildCards()

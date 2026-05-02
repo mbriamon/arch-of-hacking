@@ -1,0 +1,13 @@
+        \begin{tikzpicture}
+          \cardbackground{$card.image}
+          #if $card.type!= None
+          \cardtype$card.type{$card.category}
+          #end if
+          \cardtitle{$card.name}
+          \cardcontent{$card.description.replace('%', '\%')}{\contentB}
+          \cardprice{$card.value}
+          #set $border = $getVar('border', 1)
+          #if $border != 0
+          \cardborder
+          #end if
+        \end{tikzpicture}

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# Cardgame development environment provisioning
+#
+
+# Parameters
+APT_INSTALL="sudo LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y"
+
+# Dependencies
+DEPENDENCIES="texlive-latex-base texlive-latex-recommended texlive-latex-extra"
+DEPENDENCIES="$DEPENDENCIES texlive-fonts-extra texlive-pictures texlive-extra-utils"
+DEPENDENCIES="$DEPENDENCIES python3-yaml python3-cheetah python3-unidecode python3-pycurl"
+DEPENDENCIES="$DEPENDENCIES python3-shortuuid vim-latexsuite yamllint git-flow pelican"
+DEPENDENCIES="$DEPENDENCIES pdftk pandoc tor"
+DEPENDENCIES="$DEPENDENCIES imagemagick qrencode"
+DEPENDENCIES="$DEPENDENCIES pcre2-utils"
+
+# Install dependencies
+$APT_INSTALL $DEPENDENCIES

@@ -1,0 +1,272 @@
+%
+% Default card theme macros, implemented with tcolorbox.
+% Based on https://tex.stackexchange.com/a/185830
+%
+
+% Dummy-Contents
+\newcommand{\contentA}{}
+\newcommand{\contentB}{}
+
+% Old trimmed box config
+%\newcommand{\trimmedbox}{\trimbox{0mm 0mm -5mm -5mm}}
+
+% New trimmed box config: more distance between rows of cards
+\newcommand{\trimmedbox}{\trimbox{0mm 0mm -5mm -8mm}}
+
+% Card version
+\newcommand{\cardversion}{\node at (3,0.5) {v2.0.0};}
+%\newcommand{\cardversion}{\node at (3,0.5) {v\input{../.version}};}
+
+% TikZ/PGF settings
+%
+% Originally using 9cm X 6cm for the total card size.
+%
+% This sizing is compatible with a regular deck of cards.
+%
+% This may or may not account for cutting/cropping discreppancies during
+% printing.
+%
+% Alternative: use 8.8cm X 6cm, which may fit better in a card sleeve.
+\pgfmathsetmacro{\cardheight}{8.8}
+\pgfmathsetmacro{\cardwidth}{6}
+%\pgfmathsetmacro{\cardheight}{9}
+\pgfmathsetmacro{\imagewidth}{\cardwidth}
+\pgfmathsetmacro{\imageheight}{0.75*\cardheight}
+\pgfmathsetmacro{\stripwidth}{0.7}
+\pgfmathsetmacro{\strippadding}{0.2}
+\pgfmathsetmacro{\textpadding}{0.1}
+%\pgfmathsetmacro{\titley}{\cardheight-0.1*\strippadding-0.1*\textpadding-0.1*\stripwidth}
+\pgfmathsetmacro{\titley}{\cardheight}
+\pgfmathsetmacro{\cardpricey}{\cardheight-\strippadding-1.5*\textpadding-0.5*\stripwidth}
+
+% Shapes
+\def\shapeCard{(0,0) rectangle (\cardwidth,\cardheight)}
+\def\shapeLeftStripLong{(\strippadding,-0.2) rectangle (\strippadding+\stripwidth,\cardheight-\strippadding-\strippadding-1)}
+\def\shapeLeftStripBottom{(\strippadding,-0.2) rectangle (\strippadding+\stripwidth,\cardheight/2-\strippadding-\strippadding-1)}
+\def\shapeLeftStripShort{(\strippadding,\cardheight-\strippadding-1) rectangle (\strippadding+\stripwidth,\cardheight+0.2)}
+\def\shapeRightStripShort{(\cardwidth-\stripwidth-\strippadding,\cardheight-\strippadding-1) rectangle (\cardwidth-\strippadding,\cardheight+0.2)}
+\def\shapeTitleArea{(2*\strippadding+\stripwidth,\cardheight-1*\strippadding) rectangle (\cardwidth-2*\strippadding-\stripwidth,\cardheight-2.8*\stripwidth)}
+\def\shapeContentArea{(2*\strippadding+\stripwidth,0.5*\cardheight) rectangle (\cardwidth+0.2,-0.2)}
+
+% Stylings
+\tikzset{
+    % Rounded corners
+    cardcorners/.style={
+        %rounded corners=0.2cm
+    },
+    % Element corners
+    elementcorners/.style={
+        rounded corners=0.1cm
+    },
+    % Shadow
+    stripshadow/.style={
+        drop shadow= {
+            opacity=.5,
+            %shadow,
+            color=black
+        }
+    },
+    % Corners and shadow
+    strip/.style={
+        elementcorners,
+        stripshadow
+    },
+    none/.style={
+    },
+    % Card image
+    cardimage/.style={
+        path picture={
+            \node[below=-1.5mm] at (0.5*\cardwidth,\cardheight) {
+                \includegraphics[width=\imagewidth cm]{#1}
+            };
+        }
+    },
+}
+
+% TikZ-Raster
+\newcommand{\carddebug}{
+    \draw [step=1,help lines] (0,0) grid (\cardwidth,\cardheight);
+}
+
+% Card border
+\newcommand{\cardborder}{
+    \draw[lightgray,cardcorners] \shapeCard;
+}
+
+% Card background
+\newcommand{\cardbackground}[1]{
+    % This draws a border
+    %\draw[cardcorners, cardimage=#1] \shapeCard;
+
+    % This does not draw any border
+    \path[cardimage=#1] \shapeCard;
+}
+
+% Card type
+\newcommand{\cardtype}[4]{
+    % First we fill the intersecting area
+    % The \clip command does not allow options, therefore
+    % we have to use a scope to set the even odd rule.
+    \begin{scope}[even odd rule]
+        % Define a clipping path. All paths outside shapeCard will
+        % be cut because the even odd rule is set.
+        \clip[cardcorners] \shapeCard;
+        % Fill shapeLeftStripLong and shapeLeftStripShort.
+        % Since the even odd rule is set, only the card will be filled.
+        \fill[strip,#1] \shapeLeftStripLong node[rotate=90,above left=0.9mm,font=\normalsize] {
+            \color{white}\uppercase{#2}
+        };
+        \fill[none,#1] \shapeLeftStripBottom node[rotate=90,above left=0.9mm,font=\normalsize] {
+            \color{white}\uppercase{#4}
+        };
+        \fill[strip,#1] \shapeLeftStripShort;
+    \end{scope}
+
+    \node at (\strippadding+\stripwidth-0.28,\cardheight-\strippadding-\strippadding-0.37) {\color{white}#3};
+}
+
+% Specific card types
+\newcommand{\cardtypeataque}[1]{\cardtype{itembg}{#1}{\hspace{-1mm}\LARGE\bomb}{Ataque}}
+\newcommand{\cardtyperecurso}[1]{\cardtype{characterbg}{#1}{\hspace{-1mm}\LARGE\lefthand}{Recurso}}
+\newcommand{\cardtypedefesa}[1]{\cardtype{abilitybg}{#1}{\hspace{-1mm}\Large\floweroneright}{Defesa}}
+\newcommand{\cardtypeshabilidade}[1]{\cardtype{testbg}{#1}{\hspace{-1.4mm}\huge\ding{78}}{Habilidade}}
+\newcommand{\cardtypeattack}[1]{\cardtype{itembg}{#1}{\hspace{-1mm}\LARGE\bomb}{Attack}}
+\newcommand{\cardtypeasset}[1]{\cardtype{characterbg}{#1}{\hspace{-1mm}\LARGE\lefthand}{Asset}}
+\newcommand{\cardtypedefense}[1]{\cardtype{abilitybg}{#1}{\hspace{-1mm}\Large\floweroneright}{Defense}}
+\newcommand{\cardtypeskill}[1]{\cardtype{testbg}{#1}{\hspace{-1.4mm}\huge\ding{78}}{Skill}}
+
+% Apply contour on each word in a way that the whole block gets line breaks
+% Thanks to https://tex.stackexchange.com/a/412863
+\ExplSyntaxOn
+\NewDocumentCommand{\outline}{m}
+ {
+  \seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 }
+  \seq_map_inline:Nn \l_tmpa_seq { \contour{black}{##1} ~ } \unskip
+ }
+\ExplSyntaxOff
+
+% Card title
+\newcommand{\cardtitle}[1]{
+    % Title text area
+    \node[text width=3.90cm,anchor=north] at (0.5*\cardwidth,\titley) {
+        % Within a transparent color box
+        \begin{tcolorbox}[beforeafter skip balanced=0,top=0,bottom=0,left=0,right=0,toprule=0,titlerule=0,toptitle=0,bottomtitle=0,bottomrule=0,leftrule=0,rightrule=0,halign=flush center,colback=titlebg,opacityframe=0.6,opacityback=0.6,enhanced jigsaw]
+          % Normal
+          \color{white}\uppercase{\normalsize #1}
+
+          % With contour
+          %\color{white}\uppercase{\normalsize \outline{#1}}
+        \end{tcolorbox}
+    };
+}
+
+% Card content
+\newcommand{\cardcontent}[2]{
+    \begin{scope}[even odd rule]
+        \clip[cardcorners] \shapeCard;
+        \fill[elementcorners,contentbg] \shapeContentArea;
+    \end{scope}
+    \begin{scope}[even odd rule]
+        \clip[cardcorners] \shapeCard;
+        \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,0.5*\cardheight-\textpadding) {
+            %\textit{\glqq\normalsize #1\grqq}
+            %\textit{\glqq\small#1\grqq}
+            %\textit{normalsize #1}
+            \textit{\small#1}
+        };
+        \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,3) {
+            %\vrule width \textwidth height 2pt \\[-2pt]
+            \vspace{0.2cm}
+            {\scriptsize #2}
+        };
+    \end{scope}
+}
+
+% Card price
+\newcommand{\cardprice}[1]{
+    \begin{scope}[even odd rule]
+        \clip[cardcorners] \shapeCard;
+        \fill[strip,pricebg] \shapeRightStripShort;
+    \end{scope}
+    \node at (\cardwidth-0.5*\stripwidth-\strippadding,\cardpricey-0.1) {\color{}#1};
+}
+
+\newcommand{\cutmarksCard}{
+}
+
+\newcommand{\cutmarksAThree}{
+}
+
+% Cut margins for A4 paper
+\newcommand{\cutmarksAFour}{
+  % Cut marks for the "0mm 0mm -5mm -5mm" trimmedbox dimensions
+  %\begin{tikzpicture}[remember picture, overlay]
+  %  % Horizontal marks: left
+  %  \draw (-01.20, +19.33) -- (-00.80, +19.33);
+  %  \draw (-01.20, +10.33) -- (-00.80, +10.33);
+  %  \draw (-01.20, +09.78) -- (-00.80, +09.78);
+  %  \draw (-01.20, +00.78) -- (-00.80, +00.78);
+  %
+  %  % Horizontal marks: right
+  %  \draw (+28.60, +19.33) -- (+28.20, +19.33);
+  %  \draw (+28.60, +10.33) -- (+28.20, +10.33);
+  %  \draw (+28.60, +09.78) -- (+28.20, +09.78);
+  %  \draw (+28.60, +00.78) -- (+28.20, +00.78);
+  %
+  %  %% Vertical marks: bottom
+  %  \draw (+00.17, -01.00) -- (+00.17, +00.00);
+  %  \draw (+06.18, -01.00) -- (+06.18, +00.00);
+  %  \draw (+07.04, -01.00) -- (+07.04, +00.00);
+  %  \draw (+13.04, -01.00) -- (+13.04, +00.00);
+  %  \draw (+13.90, -01.00) -- (+13.90, +00.00);
+  %  \draw (+19.90, -01.00) -- (+19.90, +00.00);
+  %  \draw (+20.77, -01.00) -- (+20.77, +00.00);
+  %  \draw (+26.77, -01.00) -- (+26.77, +00.00);
+  %
+  %  %% Vertical marks: top
+  %  \draw (+00.17, +21.00) -- (+00.17, +20.00);
+  %  \draw (+06.18, +21.00) -- (+06.18, +20.00);
+  %  \draw (+07.04, +21.00) -- (+07.04, +20.00);
+  %  \draw (+13.04, +21.00) -- (+13.04, +20.00);
+  %  \draw (+13.90, +21.00) -- (+13.90, +20.00);
+  %  \draw (+19.90, +21.00) -- (+19.90, +20.00);
+  %  \draw (+20.77, +21.00) -- (+20.77, +20.00);
+  %  \draw (+26.77, +21.00) -- (+26.77, +20.00);
+  %\end{tikzpicture}
+
+  % Cut marks for the "0mm 0mm -5mm -8mm" trimmedbox dimensions
+  % Difference from the other dimensions: 60x and 30y
+  %\begin{tikzpicture}[remember picture, overlay]
+  %  % Horizontal marks: left
+  %  \draw (-01.20, +19.63) -- (-00.20, +19.63);
+  %  \draw (-01.20, +10.63) -- (-00.20, +10.63);
+  %  \draw (-01.20, +09.78) -- (-00.20, +09.78);
+  %  \draw (-01.20, +00.78) -- (-00.20, +00.78);
+
+  %  % Horizontal marks: right
+  %  \draw (+29.20, +19.63) -- (+28.80, +19.63);
+  %  \draw (+29.20, +10.63) -- (+28.80, +10.63);
+  %  \draw (+29.20, +09.78) -- (+28.80, +09.78);
+  %  \draw (+29.20, +00.78) -- (+28.80, +00.78);
+
+  %  %% Vertical marks: bottom
+  %  \draw (+00.77, -01.00) -- (+00.77, +00.00);
+  %  \draw (+06.78, -01.00) -- (+06.78, +00.00);
+  %  \draw (+07.64, -01.00) -- (+07.64, +00.00);
+  %  \draw (+13.64, -01.00) -- (+13.64, +00.00);
+  %  \draw (+14.50, -01.00) -- (+14.50, +00.00);
+  %  \draw (+20.50, -01.00) -- (+20.50, +00.00);
+  %  \draw (+21.37, -01.00) -- (+21.37, +00.00);
+  %  \draw (+27.37, -01.00) -- (+27.37, +00.00);
+
+  %  %% Vertical marks: top
+  %  \draw (+00.77, +21.00) -- (+00.77, +20.00);
+  %  \draw (+06.78, +21.00) -- (+06.78, +20.00);
+  %  \draw (+07.64, +21.00) -- (+07.64, +20.00);
+  %  \draw (+13.64, +21.00) -- (+13.64, +20.00);
+  %  \draw (+14.50, +21.00) -- (+14.50, +20.00);
+  %  \draw (+20.50, +21.00) -- (+20.50, +20.00);
+  %  \draw (+21.37, +21.00) -- (+21.37, +20.00);
+  %  \draw (+27.37, +21.00) -- (+27.37, +20.00);
+  %\end{tikzpicture}
+}
