@@ -25,8 +25,8 @@
   description: 'WARRIOR / LEGENDARY
   
               Requires 1 Tribute. Once per game: Target 2 Technique cards in your discard pile and add it to your hand.'
-  image: https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/9BC9/production/_86718893_hi030155725.jpg
-  image credits: Wikimedia Commons
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheProphet.png
+  image credits: Gemini/DavidPavlenishvili
   #image info: http://openbsd.org
   value: 5
   #notes: 'Warrior / Legendary'
