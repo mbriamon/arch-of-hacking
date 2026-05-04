@@ -153,3 +153,65 @@
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheProphet.png
   image credits: Gemini/David
   value: 5
+- id: bK9pX2mV4cT7yW5zN8jL3R
+  name: Data Broker Syndicate
+  type: Attack
+  category: ATK 5, DEF 3
+  description: 'WARRIOR / NORMAL: An entity aggregating vast personal data sets for institutional profit and monitoring. The 21st-century rise of Big Data created unregulated data brokers, reshaping corporate marketing and state surveillance.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 4
+
+- id: Vm8nR4xP2kL7jY9cT5wB3z
+  name: Predictive Algorithm
+  type: Attack
+  category: ATK 2, DEF 5
+  description: 'WARRIOR / EFFECT: Each time a player summons a warrior gain 2 LP. Originally for targeted advertising, these algorithms forecast behavior and spark debates about algorithmic bias.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 4
+
+- id: cT6vB2xY9mP4zL7kR3jW8N
+  name: Deplatforming Protocol
+  type: Attack
+  category: ATK 1, DEF 2
+  description: 'WARRIOR / EFFECT: Flip: Target 1 warrior on the field and return it to the owner hand. As social media platforms gained power, deplatforming emerged as a controversial tool to isolate specific entities.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 2
+
+- id: jY5cT9wB3zV8nR2xP7kL4m
+  name: Subpoena and Seizure
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Destroy all warriors on the field. Subpoenas have historically been critical instruments for compelling evidence and abruptly dismantling operations.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 4
+
+- id: L7kR2jW9N6vB4xY8mP3zT5
+  name: Informant Co-optation
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: If you Tribute a warrior this turn you may Tribute 1 target opposing warrior as if you controlled it. Intelligence agencies have long relied on turning adversaries into informants to exploit internal fractures.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 3
+
+- id: P4zL8kR3jW7N2vB9xY5mC6
+  name: Attrition Warfare
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Inflict 1 LP damage to your opponent for each warrior they control. A brutal military strategy dating back centuries, attrition focuses on wearing down opponents through continuous losses rather than decisive battles.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 2
+
+- id: xP7kL3mY5cT8wB2zV9nR4j
+  name: Narrative Spin
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Until the End Phase all effects that add or subtract IMP or COV are reversed. Manipulating public perception through calculated rhetoric has been a staple of political strategy since the dawn of mass media.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
+  image credits: Gemini/David
+  value: 2
