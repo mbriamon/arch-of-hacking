@@ -215,3 +215,156 @@
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/skull.svg
   image credits: Gemini/David
   value: 2
+
+- id: eJnS2vvMsiHp4n7TLx4kJr
+  name: Cambridge Analytica
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: A firm specializing in the exploitation of personal data to influence collective behavior and political outcomes.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CambridgeAnalytica.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: RMPegRwX8828PkTYQ9pdCC
+  name: PRISM Infrastructure
+  type: Attack
+  category: ATK 4, DEF 5
+  description: 'WARRIOR / NORMAL: A clandestine state-collection system providing institutions with direct access to private communication servers.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PRISM.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: iC8ByEthh6ZSfpSRwAj2ih
+  name: Deep Packet Inspection (DPI)
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: Network monitoring that examines data at the application layer to detect and block resistance traffic.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DPI.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: Bh4oxPVqjLm8EUUMjwaYSu
+  name: GCHQ Operative
+  type: Attack
+  category: ATK 5, DEF 3
+  description: 'WARRIOR / EFFECT: When summoned: reveal 1 face-down Event card your opponent controls.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GCHQ.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: dvH2ACR6VFceZbf9ewPtHy
+  name: Facial Recognition Database
+  type: Attack
+  category: ATK 2, DEF 5
+  description: 'WARRIOR / NORMAL: A biometric system used for identifying and tracking individual actors in public spaces.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/FacialRecognition.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: UXfzWkqQS9cTqcush38bX2
+  name: XKeyscore
+  type: Attack
+  category: ATK 5, DEF 5
+  description: 'WARRIOR / NORMAL: A digital search engine enabling the real-time analysis of global internet traffic and metadata.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/XKeyscore.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: fK42v3xiZwbWAsqevNDr88
+  name: National Security Agency (NSA)
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: The state entity responsible for global signals intelligence and cryptographic dominance.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/NSA.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: Af5aVkCZZ6HGgLDBxrJCKW
+  name: Axiom Data Broker
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: A corporate aggregator specializing in the collection and sale of consumer data for institutional control.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/AxiomDataBroker.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: ZNy68Yrfz5uajd93yEeej6
+  name: Blue Coat Systems
+  type: Attack
+  category: ATK 5, DEF 4
+  description: 'WARRIOR / NORMAL: Hardware providing surveillance and censorship capabilities to institutional and state actors.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BlueCoatSystems.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: Yc43c3Z7NLigjXkiQU3doc
+  name: Zero-Day Purchase
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target 1 warrior your opponent controls and destroy it.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ZeroDayPurchase.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: R4Aha7RapJkfxkzKDm7FNK
+  name: Targeted Surveillance
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Reveal all face-down cards on your opponent’s field.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TargetedSurveillance.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: Jvb2f4v8uUXSvb8hQFQyZi
+  name: Signal Intelligence
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Draw 1 card. If it is a Technique or Event card, draw 1 more card.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SignalIntelligence.png
+  image credits: Gemini/Mary
+  value: 1
+
+  id: KST3TL7jmu9uY6Jx3fGFd3
+  name: Digital Footprint
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Your opponent must play with their hand revealed for 2 turns.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DigitalFootprint.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: 4YnU8PoDiWLjUzW3ygsf3R
+  name: National Security Letter (NSL)
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: When your opponent activates a Technique: negate that effect and destroy the card.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/NSL.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: 
+  name: 
+  type: 
+  category: 
+  description: ''
+  image: 
+  image credits: 
+  value:
+
+  id: 
+  name: 
+  type: 
+  category: 
+  description: ''
+  image: 
+  image credits: 
+  value:
+
+  id: 
+  name: 
+  type: 
+  category: 
+  description: ''
+  image: 
+  image credits: 
+  value: 
