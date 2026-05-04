@@ -342,29 +342,201 @@
   image credits: Gemini/Mary
   value: 3
 
-  id: 
-  name: 
-  type: 
-  category: 
-  description: ''
-  image: 
-  image credits: 
-  value:
+  id: VLGDykdaPQFBh4usBEGc9j
+  name: Gell’s Enchantment
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position or declare an attack.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GellsEnchantment.png
+  image credits: Gemini/Mary
+  value: 2
 
-  id: 
-  name: 
-  type: 
-  category: 
-  description: ''
-  image: 
-  image credits: 
-  value:
+  id: Gn5UnXswQnCPZ35f866EtS
+  name: Anonymous Collective
+  type: Attack
+  category: ATK 7, DEF 6
+  description: 'WARRIOR / NORMAL: A decentralized swarm executing coordinated digital campaigns against institutional targets.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/AnonymousCollective.png
+  image credits: Gemini/Mary
+  value: 7
 
-  id: 
-  name: 
-  type: 
-  category: 
-  description: ''
-  image: 
-  image credits: 
-  value: 
+  id: fogqYzxEzAj3rCeSREgTmu
+  name: Linux Kernel
+  type: Attack
+  category: ATK 3, DEF 6
+  description: 'WARRIOR / NORMAL: Decentralized operating system infrastructure highly resistant to corporate infiltration.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/LinuxKernel.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: JoXkgyPgXwrCw7YpHGi2fJ
+  name: Honeypot Server
+  type: Attack
+  category: ATK 2, DEF 6
+  description: 'WARRIOR / EFFECT: If this card is attacked return the attacking warrior to the opponent hand.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/HoneypotServer.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: c2ukJGfDscH7fQJVvwQ69N
+  name: Packet Sniffer
+  type: Attack
+  category: ATK 1, DEF 3 
+  description: 'WARRIOR / EFFECT: Flip: Target 1 Event card on the field and destroy it. If face-down reveal it first.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PacketSniffer.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: 6KZRfurUfJsiFAJYRne6YR
+  name: Rootkit Payload
+  type: Attack
+  category: ATK 1, DEF 2
+  description: 'WARRIOR / EFFECT: Flip: Target 1 opposing warrior and destroy it.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/RootkitPayload.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: 6KZRfurUfJsiFAJYRne6YR
+  name: Phishing Exploit
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target 1 warrior your opponent controls take control of it until the End Phase.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhishingExploit.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: 5RfcAy2i8vrNy6F34gNqEH
+  name: Whistleblower Data Dump
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Both players discard their hands and draw the same number of cards.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/WhistleblowerDataDump.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: bn5CMye68FCSFps3ai8jqH
+  name: Tor Network Routing
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: You take no LP damage this turn. Your warriors cannot be destroyed by battle this turn.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TorNetworkRouting.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: 7z7n8WZLSTSZtpqRJ2GRYp
+  name: Cult of the Dead Cow (cDc)
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: A legacy hacker group that released the Back Orifice tool to demonstrate widespread security vulnerabilities.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CultoftheDeadCow.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: guHRm8dxQTm2NHxRkfU5PT
+  name: Chelsea Manning
+  type: Attack
+  category: ATK 4, DEF 5
+  description: 'WARRIOR / EFFECT: When this card is destroyed: search your deck for 1 Technique card and add it to your hand.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ChelseaManning.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: Dy9uW462F7NMTsQFCiPyUt
+  name: Chaos Computer Club (CCC)
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: Europe’s largest association of hackers advocating for freedom of information and decentralized social networks.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ChaosComputerClub.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: caMWgQtCx98ysigY6mFJJQ
+  name: Blue Box
+  type: Attack
+  category: ATK 3, DEF 2
+  description: 'WARRIOR / NORMAL: A phreaking device used to simulate terminal tones and manipulate international telephone routing systems.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BlueBox.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: MUtA5f3B3y7V2TFjAEg8C5
+  name: LulzSec
+  type: Attack
+  category: ATK 5, DEF 2
+  description: 'WARRIOR / NORMAL: A high-profile offshoot of Anonymous known for rapid-fire attacks and massive public data disclosures.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/LulzSec.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: YsqbbKfFLX5oTxJueNV2Jt
+  name: The Mentor
+  type: Attack
+  category: ATK 5, DEF 4
+  description: 'WARRIOR / EFFECT: While this card is Upright: all other Hacktivist warriors gain 1 ATK. Represents the author of the "Hacker Manifesto".'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheMentor.png
+  image credits: Gemini/Mary
+  value: 4
+
+  id: je62mcjG7RoQovo2SFEHHz
+  name: Phrack Staff
+  type: Attack
+  category: ATK 3, DEF 5
+  description: 'WARRIOR / NORMAL: The editors and contributors who maintain the underground circulation of forbidden technical knowledge.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhrackStaff.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: nKzQo6exNeaf3XaubvCVhc
+  name: SQL Injection
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target 1 warrior on the field and destroy it.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SQLInjection.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: EKoUqY4F4aFrzgs9mVHw7k
+  name: Mirror Site
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Return 1 warrior you control to your hand then summon 1 warrior from your hand.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/MirrorSite.png
+  image credits: Gemini/Mary
+  value: 1
+
+  id: 4UD9tAaCirmuGJvQXrGCUz
+  name: Back Orifice
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target 1 Sideways warrior and change it to Upright mode.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BackOrifice.png
+  image credits: Gemini/Mary
+  value: 3
+
+  id: HpAFEoVNo4PKFrwTtKDjn3
+  name: Social Engineering Pretext
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Look at your opponent’s hand and discard 1 card.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SocialEngineeringPretext.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: N3AGFicAn27asGJvFi5E3X
+  name: Public Backlash
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: When your opponent deals LP damage: your opponent takes the same amount of damage.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PublicBacklash.png
+  image credits: Gemini/Mary
+  value: 2
+
+  id: VEYhj2Fs9Bs9JGRt5dikrc
+  name: System Overload
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: When your opponent declares an attack: negate the attack and destroy the attacking warrior.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SystemOverload.png
+  image credits: Gemini/Mary
+  value: 3
+  
