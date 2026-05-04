@@ -17,48 +17,7 @@
 #  Add yourself to AUTHORS, if you want credit
 #  for the cards you added
 #
-- id: ERCbGHsQUDcR7qvSSFd6tH
-  name: The Prophet
-  type: Attack
-  category: ATK 8, DEF 7
-  #url: test
-  description: 'WARRIOR / LEGENDARY
-  
-              Requires 1 Tribute. Once per game: Target 2 Technique cards in your discard pile and add it to your hand.'
-  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheProphet.png
-  image credits: Gemini/DavidPavlenishvili
-  #image info: http://openbsd.org
-  value: 5
-  #notes: 'Warrior / Legendary'
-
-- id: KEQgmhQWyua6XyECn4JYEv
-  name: Electronic Disturbance Theater
-  type: Attack 
-  category: ATK 7, DEF 3 
-  #url: test
-  description: 'WARRIOR / NORMAL
-  
-                A hacktivist collective utilizing cyber attacks to execute mass political mobilization and disript institutional servers.'
-  image: https://hammer.ucla.edu/sites/default/files/styles/hero_r_small/public/migrated-assets/media/programs/2019/Summer_2019/cult-of-the-dead-cow.jpg?itok=awmYQ72J
-  image credits: Wikimedia Commons
-  #image info: http://www.nytimes.com/2011/05/08/world/asia/08binladen.html?_r=2&pagewanted=all
-  value: 4
-  #notes: test
-
-- id: TqC4CEDoHhg9c3TtDr7Kc3
-  name: ColdFire
-  type: Attack
-  category: ATK 5, DEF 2
-  #url: test
-  description: 'WARRIOR / NORMAL
-  
-                A relentless black-hat hacker driven by unrestricted access who has compromised over a hundred mainframes.'
-  image: https://blogadmin.detectify.com/app/uploads/2018/03/malicious_hat_hacker.png
-  image credits: Wikimedia Commons
-  #image info: http://www.wideweb.com/phonetrips/
-  value: 3
-  #notes: test
-
+---
 - id: ReC2YysUS9AduxeChRcM23
   name: Smashing the Stack for Fun and Profit 
   type: Skill
@@ -66,10 +25,9 @@
   #url: test
   description: 'TECHNIQUE / SPELL
   
-                Destroy the opposing warrior with the lowest COV on the field.'
-  image: https://delinea.com/hs-fs/hubfs/passwd-file.png?width=750&name=passwd-file.png
-  image credits: Wikimedia Commons
-  #image info: https://flic.kr/p/3gkCgA
+                Destroy the opposing warrior with the lowest COV on the field. Named after a seminal 1996 article, this technique popularized buffer overflow exploits and transformed software vulnerabilities into weaponized attacks.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SmashingtheStack.png
+  image credits: Gemini/David
   value: 2
   #notes: test
 
@@ -80,10 +38,9 @@
   #url: test
   description: 'TECHNIQUE / SPELL
   
-                Target 1 warrior in either player discard pile and special summon it to your side of the field.'
-  image: https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/05/051724_system_hack.jpg
-  image credits: Wikimedia Commons
-  #image info: https://flic.kr/p/3gkCgA
+                Target 1 warrior in either player discard pile and special summon it to your side. Early internet service providers were frequent targets for hackers seeking infrastructure control and backdoor access to broader networks.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ISP%20Breach.png
+  image credits: Gemini/David
   value: 3
   #notes: test
 
@@ -94,10 +51,9 @@
   #url: test
   description: 'TECHNIQUE / SPELL
   
-                Opposing warriors cannot declare an attack for 3 of your opponent turns.'
-  image: https://www.metacompliance.com/wp-content/uploads/2025/06/5-less-obvious-hacking-methods-you-should-be-aware-of.jpg
-  image credits: Wikimedia Commons
-  #image info: https://openclipart.org/detail/194160/football-referees-whistle
+                Opposing warriors cannot declare an attack for 3 of your opponent''s turns. Modeled after civil rights protests, early hacktivists used automated page reloads to overwhelm targets, establishing the foundational tactic of DDoS.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DigitalSitIn.png
+  image credits: Gemini/David
   value: 3
   #notes: test
 
@@ -108,10 +64,9 @@
   #url: test
   description: 'EVENT / TRAP
                 
-                When your warrior is destroyed search your deck for 1 warrior with 3 or less IMP and add it to your hand.'
-  image: https://phrack.org/images/p40ylogo.png
-  image credits: Wikimedia Commons
-  #image info: https://flic.kr/p/3gkCgA
+                When your warrior is destroyed search your deck for 1 warrior with 3 or less IMP and add it to your hand. Phrack was a vital underground magazine that circulated exploits and became a focal point for early cyber-law debates.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhrackPublication%2348.png
+  image credits: Gemini/David
   value: 1
   #notes: test
 
@@ -122,10 +77,9 @@
   #url: test
   description: 'EVENT / TRAP
                 
-                When an opponent warrior declares an attack, negate the attack and inflict LP damage to your opponent equal to the attacking warrior IMP.'
-  image: https://www.avast.com/hs-fs/hubfs/New_Avast_Academy/what_is_ethical_hacking_academy/What-is-Ethical-Hacking-01.png?width=1320&height=600&name=What-is-Ethical-Hacking-01.png
-  image credits: Wikimedia Commons
-  #image info: https://flic.kr/p/3gkCgA
+                When an opponent warrior declares an attack, negate the attack and inflict LP damage to your opponent equal to the attacking warrior IMP. Collectives often employ decentralized retaliation to neutralize institutional overreach by exposing an attacker’s own vulnerabilities.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/MolochCollective.png
+  image credits: Gemini/David
   value: 3
   #notes: test
 
@@ -136,9 +90,9 @@
   #url: test
   description: 'EVENT / TRAP
   
-                Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position.'
-  image: https://meta-wp-uploads.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/11/10082155/redteam-05.png
-  image credits: Wikimedia Commons
+                Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position. This represents how many rogue actors eventually transitioned into legal security roles, blurring the lines between subversion and corporate defense.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GreayhatTransaction.png
+  image credits: Gemini/David
   value: 2
   #notes: test
 
@@ -149,121 +103,139 @@
   #url: test
   description: 'WARRIOR / LEGENDARY 
   
-                Requires 1 Tribute. Once per game: Reveal all face-down Defense cards on your opponent field and destroy them.'
-  image: https://spectator.com/wp-content/uploads/2025/12/thiel_inside_colour_002.jpg?w=1347 
-  #image info: https://www.flickr.com/photos/andertoons-cartoons/2857238260/
-  image credits: Wikimedia Commons
+                Requires 1 Tribute. Once per game: Reveal and destroy all face-down Event cards on your opponent''s field. As a Palantir co-founder, Thiel influenced the integration of Silicon Valley tech with the military-industrial complex.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PeterThiel.png
+  image credits: Gemini/David
   value: 5
   #notes: test
 
-- id: TrKCYuKkcRpmT3Uc5UJMCZ
-  name: Palantir Monitoring System 
-  type: Attack
-  category: ATK 7, DEF 4 
- #url: test
-  description: 'WARRIOR / NORMAL
-                
-                An industrial-scale data aggregation entitiy executing mass social engineering to consolidate institutional power.'
-  image: https://www.palantir.com/assets/xrfr7uokpv1b/3T5hPp4lou3SNh7oc68fhj/d0b5e5d4b8019326b7cfb1b58691f477/Asset_2AIP_copy_2.png?quality=70&width=1600&height=712&fit=crop 
-  image credits: Wikimedia Commons
-  #image info: https://en.wikipedia.org/wiki/Telephone_tapping#/media/File:This_Phone_Is_Tapped.jpg
-  value: 4
-  #notes: test
-
-- id: h3CdRQJagLyvAZ3kguYgZ8
-  name: Edward Bernays
-  type: Attack
-  category: ATK 5, DEF 3 
-  #url: test
-  description: 'WARRIOR / NORMAL
-  
-                The pioneer of mass manipulation who utilized pscyhological techniques to direct public discourse and behavior.'
-  image: https://upload.wikimedia.org/wikipedia/commons/6/61/Edward_Bernays_cropped.png 
-  image credits: Wikimedia Commons
-  #image info: http://www.fadedindustry.com/monster-the-kali-muscle-story/
-  value: 2
-  #notes: test
-
-- id: fvLPjcHRh3L94WPAvzHAWm
-  name: Pegasus Spyware
-  type: Skill
-  category: ATK N/A, DEF N/A
-  #url: test
-  description: 'TECHNIQUE / SPELL
-  
-                Destroy the opposing warrior with the highest COV on the field.'
-  image: https://s2.elespanol.com/2022/05/02/omicrono/software/669443349_223996864_1706x960.jpg 
-  image credits: Wikimedia Commons
-  #image info: https://commons.wikimedia.org/wiki/File:Darren_in_dumpster_6.jpg
-  value: 2
-  #notes: test
-
-- id: TZ9rg8nGyvjLeA96AAeeS4
-  name: Mass Social Engineering
-  type: Skill
-  category: ATK N/A, DEF N/A
-  #url: tests
-  description: 'TECHNIQUE / SPELL
-  
-                Draw 2 cards.'
-  image: https://www.pngkey.com/png/detail/938-9387485_social-engineering-logo-png.png 
-  image credits: Wikimedia Commons
-  #image info: https://commons.wikimedia.org/wiki/File:Darren_in_dumpster_6.jpg
-  value: 2
-  #notes: test
-
-- id: 6VcdZovnZxG3pusrp5meep
-  name: Targeted Ad Generation 
-  type: Skill
-  category: ATK N/A, DEF N/A
-  #url: test
-  description: 'TECHNIQUE / SPELL
-  
-                Target 1 Upright warrior on the field and switch it to Sideways mode.'
-  image: https://www.marketingevolution.com/hubfs/iStock-1468369907.jpg
-  image credits: Wikimedia Commons
-  #image info: http://victorypi.com/services/computer-forensics-deleted-data-recovery/
-  value: 1
-  #notes: test
-
-- id: 7HmmygR2sdGxG3k3tR9yiC
-  name: Evening with Berferd
-  type: Defense
-  category: ATK N/A, DEF N/A
-  #url: test
-  description: 'EVENT / TRAP
-  
-                When your opponent summons a warrior with 4 or more IMP, target that warrior and destroy it.'
-  image: https://images.stockcake.com/public/7/7/0/7704c2b8-c503-464a-b920-655ea4e2aae5_large/cyberpunk-hacking-scene-stockcake.jpg
-  image credits: Wikimedia Commons
-  #image info: https://openclipart.org/detail/181904/prism-logo
-  value: 2
-  #notes: test
-
-- id: HRaU8Kj72AuMX2qQ4uikHR
-  name: Gell's Enchantment 
-  type: Defense
-  category: ATK N/A, DEF N/A
-  url: test
-  description: 'EVENT / TRAP
-  
-                Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position or declare an attack.'
-  image: https://thumbs.dreamstime.com/b/gadget-enchantment-delving-world-technological-sorcery-imagine-enchanting-scene-where-advanced-technology-intertwines-291714824.jpg
-  image credits: tests
-  #image info: http://www.lcscss.com/oc-restaurants-cited-for-vermin-infestation/
-  value: 2
-  notes: test
-
-- id: 4QETj8x5wcpTzqug6VWAJx
+- id: vB8xYmPq9zL2kRj5wN7cT4
   name: Censorship
   type: Defense
   category: ATK N/A, DEF N/A
   #url: test
   description: 'EVENT / TRAP
   
-                When an opponent warrior attacks, negate the attack and reduce ATK of all opposing warriors to 0.'
-  image: https://s3.amazonaws.com/global-db-public/global-db-public/event/image/22501/censorship.jpeg
-  image credits: Wikimedia Commons
-  #image info: https://en.wikipedia.org/wiki/Keystroke_logging#/media/File:Keylogger-hardware-PS2-example-connected.jpg
-  value: 0
+                Negate an attack and reduce the ATK of all opposing warriors to 0. State and corporate filtering has historically been used to suppress dissent and control the public narrative.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CensorShip.png
+  image credits: Gemini/David
+  value: 3
+  #notes: test
+
+- id: kF3hD8vN1pT6mXj9bYc2L5
+  name: ColdFire
+  type: Attack
+  category: ATK 5, DEF 2
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                A relentless black-hat hacker driven by unrestricted access who compromised over a hundred mainframes. Black-hat hackers in the 80s and 90s established a culture of intrusion that forced the evolution of modern defensive tactics.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ColdFire.png
+  image credits: Gemini/David
+  value: 3
+  #notes: test
+
+- id: zR7pW4xY2mN9bL5kC8jT3v
+  name: Edward Bernays
+  type: Attack
+  category: ATK 5, DEF 3
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                A pioneer of mass manipulation who used psychological techniques to direct public behavior. As the "father of public relations," his strategies laid the groundwork for modern corporate and political propaganda.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/EdwardBernays.png
+  image credits: Gemini/David
+  value: 2
+  #notes: test
+
+- id: mX2bC9vN6pT4kL8jR7yW5z
+  name: Electronic Disturbance Theater
+  type: Attack
+  category: ATK 7, DEF 3
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                A hacktivist collective using cyber attacks for mass political mobilization and server disruption. In the late 1990s, the real-world EDT pioneered digital sit-ins to support movements like the Zapatistas.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ElectronicDisturbance.png
+  image credits: Gemini/David
+  value: 4
+  #notes: test
+
+- id: pT9kR3mX7yW2bC5vN8jL6z
+  name: An Evening with Berferd
+  type: Defense
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'EVENT / TRAP
+  
+                When your opponent summons a warrior with 4+ IMP, destroy it. This refers to one of the earliest documented cases of luring and tracking an active hacker in real-time in 1991.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/EveningwithBerford.png
+  image credits: Gemini/David
+  value: 2
+  #notes: test
+
+- id: bL5kC2vN9pT7mX4yW8jR3z
+  name: Mass Social Engineering
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Draw 2 cards. By exploiting psychological biases at scale, campaigns can manipulate large populations into surrendering data or adopting specific narratives.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Massocial.png
+  image credits: Gemini/David
+  value: 2
+  #notes: test
+
+- id: jR8yW3zB6xY9mP2kL5cN7v
+  name: Palantir Monitoring System
+  type: Attack
+  category: ATK 7, DEF 4
+  #url: test
+  description: 'WARRIOR / NORMAL
+  
+                An industrial-scale data entity executing mass social engineering to consolidate power. By linking disparate data silos, these systems modernized policing while sparking massive privacy and civil liberties concerns.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Palantir.png
+  image credits: Gemini/David
+  value: 4
+  #notes: test
+
+- id: wN4cT7vB2xY8mP5zL9kR3j
+  name: Pegasus Spyware
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Destroy the opposing warrior with the highest COV on the field. This zero-click tool has been controversially used by governments globally to track journalists and political rivals.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PegasusSpyware.png
+  image credits: Gemini/David
+  value: 2
+  #notes: test
+
+- id: L9kR2jW7yZ4xP5mC8vN3bT
+  name: Targeted Ad Generation
+  type: Skill
+  category: ATK N/A, DEF N/A
+  #url: test
+  description: 'TECHNIQUE / SPELL
+  
+                Switch 1 Upright warrior to Sideways mode. The shift to hyper-targeted advertising revolutionized the internet economy, turning user behavior into a highly profitable, optimized commodity.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TargetedAds.png
+  image credits: Gemini/David
+  value: 1
+  #notes: test
+
+- id: xY5mP8zL3kR9jW2cT6vB7N
+  name: The Prophet
+  type: Attack
+  category: ATK 8, DEF 7
+  #url: test
+  description: 'WARRIOR / LEGENDARY
+  
+                Requires 1 Tribute. Once per game: Target 2 Technique cards in your discard pile and add it to your hand. A famous American hacker in the Legion of Doom, The Prophet was a central figure in the 1990 federal crackdown.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheProphet.png
+  image credits: Gemini/David
+  value: 5
+  #notes: test
   #notes: test
