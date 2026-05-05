@@ -5,7 +5,7 @@
   name: Smashing the Stack for Fun and Profit 
   type: Skill
   category: ATK N/A, DEF N/A 
-  description: 'TECHNIQUE / SPELL: Destroy the opposing warrior with the lowest COV on the field. Named after a seminal 1996 article, this technique popularized buffer overflow exploits and transformed software vulnerabilities into weaponized attacks. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Destroy opponent''s lowest COV warrior. Popularized buffer overflow exploits.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SmashingtheStack.png
   image credits: Gemini/David
   value: 2
@@ -14,7 +14,7 @@
   name: ISP Breach
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Target 1 warrior in either player discard pile and special summon it to your side of the field. Early internet service providers were frequent targets for hackers seeking infrastructure control and backdoor access to broader networks. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Special summon 1 warrior from either discard pile. Hackers targeted early ISPs for control.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ISP%20Breach.png
   image credits: Gemini/David
   value: 3
@@ -23,7 +23,7 @@
   name: Digital Sit-In
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Opposing warriors cannot declare an attack for 3 of your opponent turns. Modeled after civil rights protests, early hacktivists used automated page reloads to overwhelm targets, establishing the foundational tactic of DDoS. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Opposing warriors cannot attack for 3 of opponent''s turns. Foundational DDoS tactic.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DigitalSitIn.png
   image credits: Gemini/David
   value: 3
@@ -32,7 +32,7 @@
   name: Phrack Publication 48
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: When your warrior is destroyed search your deck for 1 warrior with 3 or less IMP and add it to your hand. Phrack was a vital underground magazine that circulated exploits and became a focal point for early cyber-law debates. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: When your warrior is destroyed, add 1 warrior (<=3 IMP) from deck to hand. Central to early cyber-law.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhrackPublication%2348.png
   image credits: Gemini/David
   value: 1
@@ -41,7 +41,7 @@
   name: MOLOCH Collective 
   type: Defense 
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: When an opponent warrior declares an attack negate the attack and inflict LP damage to your opponent equal to the attacking warrior IMP. Collectives often employ decentralized retaliation to neutralize institutional overreach by exposing an attacker''s own vulnerabilities. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: Negate opponent attack and inflict LP damage equal to their warrior''s IMP. Decentralized retaliation.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/MolochCollective.png
   image credits: Gemini/David
   value: 3
@@ -50,7 +50,7 @@
   name: The Grey-Hat Transition
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: Target 1 opposing warrior it loses 2 IMP and it cannot change its battle position. This represents how many rogue actors eventually transitioned into legal security roles, blurring the lines between subversion and corporate defense. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: Target opposing warrior loses 2 IMP and cannot change position. Subversion to corporate defense.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GreayhatTransaction.png
   image credits: Gemini/David
   value: 2
@@ -59,7 +59,7 @@
   name: Peter Thiel
   type: Attack
   category: ATK 8, DEF 6
-  description: 'WARRIOR / LEGENDARY: Requires 1 Tribute. Once per game: Reveal all face-down Event cards on your opponent field and destroy them. As a Palantir co-founder, Thiel influenced the integration of Silicon Valley tech with the military-industrial complex. [ATK 8 | DEF 6]'
+  description: 'WARRIOR / LEGENDARY: 1 Tribute. Once per game: Reveal and destroy all opponent face-down Events. Palantir co-founder. [ATK 8 | DEF 6]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PeterThiel.png
   image credits: Gemini/David
   value: 5
@@ -68,7 +68,7 @@
   name: Censorship
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: When an opponent warrior attacks negate the attack and reduce ATK of all opposing warriors to 0. State and corporate filtering has historically been used to suppress dissent and strictly control the public narrative. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: Negate attack and reduce ATK of all opposing warriors to 0. Suppresses dissent.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CensorShip.png
   image credits: Gemini/David
   value: 3
@@ -77,7 +77,7 @@
   name: ColdFire
   type: Attack
   category: ATK 5, DEF 2
-  description: 'WARRIOR / NORMAL: A relentless black-hat hacker driven by unrestricted access who has compromised over a hundred mainframes. Black-hat hackers in the 80s and 90s established a culture of intrusion that forced the evolution of modern defensive tactics. [ATK 5 | DEF 2]'
+  description: 'WARRIOR / NORMAL: Relentless black-hat hacker who established a culture of intrusion. [ATK 5 | DEF 2]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ColdFire.png
   image credits: Gemini/David
   value: 3
@@ -86,7 +86,7 @@
   name: Edward Bernays
   type: Attack
   category: ATK 5, DEF 3
-  description: 'WARRIOR / NORMAL: The pioneer of mass manipulation who utilized psychological techniques to direct public discourse and behavior. As the "father of public relations," his strategies laid the groundwork for modern propaganda. [ATK 5 | DEF 3]'
+  description: 'WARRIOR / NORMAL: Father of public relations; laid groundwork for modern propaganda. [ATK 5 | DEF 3]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/EdwardBernays.png
   image credits: Gemini/David
   value: 2
@@ -95,7 +95,7 @@
   name: Electronic Disturbance Theater
   type: Attack
   category: ATK 7, DEF 3
-  description: 'WARRIOR / NORMAL: A hacktivist collective utilizing cyber attacks to execute mass political mobilization and disrupt institutional servers. In the late 1990s, the real-world EDT pioneered digital sit-ins to support movements like the Zapatistas. [ATK 7 | DEF 3]'
+  description: 'WARRIOR / NORMAL: Hacktivist collective using digital sit-ins for mass political mobilization. [ATK 7 | DEF 3]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ElectronicDisturbance.png
   image credits: Gemini/David
   value: 4
@@ -104,7 +104,7 @@
   name: An Evening with Berferd
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: When your opponent summons an warrior with 4 or more IMP target that warrior and destroy it. This refers to one of the earliest documented cases of luring and tracking an active hacker in real-time in 1991. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: When opponent summons a warrior (>=4 IMP), destroy it. Early real-time hacker tracking.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/EveningwithBerford.png
   image credits: Gemini/David
   value: 2
@@ -113,7 +113,7 @@
   name: Mass Social Engineering
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Draw 2 cards. By exploiting psychological biases at scale, campaigns can manipulate large populations into surrendering data or adopting specific narratives. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Draw 2 cards. Exploits psychological biases at mass scale.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Massocial.png
   image credits: Gemini/David
   value: 2
@@ -122,7 +122,7 @@
   name: Palantir Monitoring System
   type: Attack
   category: ATK 7, DEF 4
-  description: 'WARRIOR / NORMAL: An industrial-scale data aggregation entity executing mass social engineering to consolidate institutional power. By linking disparate data silos, these systems modernized policing while sparking massive privacy concerns. [ATK 7 | DEF 4]'
+  description: 'WARRIOR / NORMAL: Data aggregation entity executing mass social engineering. [ATK 7 | DEF 4]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Palantir.png
   image credits: Gemini/David
   value: 4
@@ -131,7 +131,7 @@
   name: Pegasus Spyware
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Destroy the opposing warrior with the highest COV on the field. This zero-click tool has been controversially used by governments globally to track journalists and political rivals. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Destroy opponent''s highest COV warrior. Zero-click government tracking tool.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PegasusSpyware.png
   image credits: Gemini/David
   value: 2
@@ -140,7 +140,7 @@
   name: Targeted Ad Generation
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Target 1 Upright warrior on the field and switch it to Sideways mode. The shift to hyper-targeted advertising turned user behavior into a highly profitable commodity. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Change 1 Upright warrior to Sideways. Turned behavior into commodity.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TargetedAds.png
   image credits: Gemini/David
   value: 1
@@ -149,7 +149,7 @@
   name: The Prophet
   type: Attack
   category: ATK 8, DEF 7
-  description: 'WARRIOR / LEGENDARY: Requires 1 Tribute. Once per game: Target 2 Technique cards in your discard pile and add it to your hand. A famous American hacker in the LOH (Legion of Hackers), The Prophet was a central figure in the 1990 federal crackdown. [ATK 8 | DEF 7]'
+  description: 'WARRIOR / LEGENDARY: 1 Tribute. Once per game: Add 2 Technique cards from discard to hand. Legion of Hackers figure. [ATK 8 | DEF 7]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheProphet.png
   image credits: Gemini/David
   value: 5
@@ -158,7 +158,7 @@
   name: Data Broker Syndicate
   type: Attack
   category: ATK 5, DEF 3
-  description: 'WARRIOR / NORMAL: An entity aggregating vast personal data sets for institutional profit and monitoring. The 21st-century rise of Big Data created unregulated data brokers, reshaping corporate marketing and state surveillance. [ATK 5 | DEF 3]'
+  description: 'WARRIOR / NORMAL: Aggregates vast personal data for institutional monitoring and profit. [ATK 5 | DEF 3]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Data%20Broker.png
   image credits: Gemini/David
   value: 4
@@ -167,7 +167,7 @@
   name: Predictive Algorithm
   type: Attack
   category: ATK 2, DEF 5
-  description: 'WARRIOR / EFFECT: If the player summons a warrior next turn gain 2 LP. Originally for targeted advertising, these algorithms forecast behavior and spark debates about algorithmic bias. [ATK 2 | DEF 5]'
+  description: 'WARRIOR / EFFECT: If player summons a warrior next turn, gain 2 LP. Forecasts behavior. [ATK 2 | DEF 5]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/predicative%20algorithm.jpg
   image credits: Gemini/David
   value: 4
@@ -176,7 +176,7 @@
   name: Deplatforming Protocol
   type: Attack
   category: ATK 1, DEF 2
-  description: 'WARRIOR / EFFECT: Flip: Target 1 warrior on the field and return it to the owner hand. As social media platforms gained power, deplatforming emerged as a controversial tool to isolate specific entities. [ATK 1 | DEF 2]'
+  description: 'WARRIOR / EFFECT: Flip: Return 1 warrior on field to owner''s hand. Controversial isolation tool. [ATK 1 | DEF 2]'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Deplatforming%20protocol.jpg
   image credits: Gemini/David
   value: 2
@@ -185,7 +185,7 @@
   name: Subpoena and Seizure
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: Destroy all warriors on the field. Subpoenas have historically been critical instruments for compelling evidence and abruptly dismantling operations. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: Destroy all warriors on field. Compels evidence and dismantles operations.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Supeana.jpg
   image credits: Gemini/David
   value: 4
@@ -194,7 +194,7 @@
   name: Informant Co-optation
   type: Skill
   category: ATK N/A, DEF N/A
-  description: 'TECHNIQUE / SPELL: If you Tribute a warrior this turn you may Tribute 1 target opposing warrior as if you controlled it. Intelligence agencies have long relied on turning adversaries into informants to exploit internal fractures. [ATK N/A | DEF N/A]'
+  description: 'TECHNIQUE / SPELL: If you Tribute this turn, you may Tribute 1 opposing warrior instead. Exploits fractures.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Informant-co%20optation.jpg
   image credits: Gemini/David
   value: 3
@@ -203,7 +203,7 @@
   name: Attrition Warfare
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: Inflict 1 LP damage to your opponent for each warrior they control. A brutal military strategy dating back centuries, attrition focuses on wearing down opponents through continuous losses. [ATK N/A | DEF N/A]'
+  description: 'EVENT / TRAP: Inflict 1 LP damage per warrior opponent controls. Continuous losses strategy.'
   image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/Attrition%20Warfare.jpg
   image credits: Gemini/David
   value: 2
@@ -212,7 +212,331 @@
   name: Narrative Spin
   type: Defense
   category: ATK N/A, DEF N/A
-  description: 'EVENT / TRAP: Until the End Phase all effects that add or subtract IMP or COV are reversed. Manipulating public perception through calculated rhetoric has been a staple of political strategy since the dawn of mass media. [ATK N/A | DEF N/A]'
-  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/NarrativeSpin.png
+  description: 'EVENT / TRAP: Until End Phase, all IMP/COV modifiers are reversed. Manipulates public perception.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/narrative%20Spin.jpg
   image credits: Gemini/David
   value: 2
+
+- id: eJnS2vvMsiHp4n7TLx4kJr
+  name: Cambridge Analytica
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: Illicitly harvested millions of profiles to influence global elections. [ATK 6 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CambridgeAnalytica.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: RMPegRwX8828PkTYQ9pdCC
+  name: PRISM Infrastructure
+  type: Attack
+  category: ATK 4, DEF 5
+  description: 'WARRIOR / NORMAL: Clandestine state system for mass global surveillance. Exposed by Snowden. [ATK 4 | DEF 5]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PRISM.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: iC8ByEthh6ZSfpSRwAj2ih
+  name: Deep Packet Inspection (DPI)
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: Application-layer network monitoring used by regimes to censor dissent. [ATK 4 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DPI.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: Bh4oxPVqjLm8EUUMjwaYSu
+  name: GCHQ Operative
+  type: Attack
+  category: ATK 5, DEF 3
+  description: 'WARRIOR / EFFECT: When summoned: reveal 1 face-down Event opponent controls. UK signals intelligence. [ATK 5 | DEF 3]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GCHQ.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: dvH2ACR6VFceZbf9ewPtHy
+  name: Facial Recognition Database
+  type: Attack
+  category: ATK 2, DEF 5
+  description: 'WARRIOR / NORMAL: Biometric system that tracks actors, ending public anonymity. [ATK 2 | DEF 5]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/FacialRecognition.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: UXfzWkqQS9cTqcush38bX2
+  name: XKeyscore
+  type: Attack
+  category: ATK 5, DEF 5
+  description: 'WARRIOR / NORMAL: Warrantless digital search engine for real-time global traffic analysis. [ATK 5 | DEF 5]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/XKeyscore.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: fK42v3xiZwbWAsqevNDr88
+  name: National Security Agency (NSA)
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: The most powerful global surveillance apparatus in history. [ATK 6 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/NSA.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: Af5aVkCZZ6HGgLDBxrJCKW
+  name: Axiom Data Broker
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: Corporate aggregator holding thousands of data points on billions. [ATK 4 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/AxiomDataBroker.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: ZNy68Yrfz5uajd93yEeej6
+  name: Blue Coat Systems
+  type: Attack
+  category: ATK 5, DEF 4
+  description: 'WARRIOR / NORMAL: Hardware enabling strict internet filtering in authoritarian nations. [ATK 5 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BlueCoatSystems.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: Yc43c3Z7NLigjXkiQU3doc
+  name: Zero-Day Purchase
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target and destroy 1 opposing warrior. Acquiring unpatched vulnerabilities.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ZeroDayPurchase.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: R4Aha7RapJkfxkzKDm7FNK
+  name: Targeted Surveillance
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Reveal all opponent face-down cards. Bypasses encryption for specific targets.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TargetedSurveillance.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: Jvb2f4v8uUXSvb8hQFQyZi
+  name: Signal Intelligence
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Draw 1 card. If Technique/Event, draw 1 more. Intercepts electronic comms.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SignalIntelligence.png
+  image credits: Gemini/Mary
+  value: 1
+
+- id: KST3TL7jmu9uY6Jx3fGFd3
+  name: Digital Footprint
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Opponent plays with hand revealed for 2 turns. Traceable online records.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/DigitalFootprint.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: 4YnU8PoDiWLjUzW3ygsf3R
+  name: National Security Letter (NSL)
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Negate and destroy activated Technique. Subpoenas with strict gag orders.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/NSL.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: VLGDykdaPQFBh4usBEGc9j
+  name: Gell’s Enchantment
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Target opposing warrior loses 2 IMP; cannot change position or attack. Amnesia effect.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/GellsEnchantment.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: Gn5UnXswQnCPZ35f866EtS
+  name: Anonymous Collective
+  type: Attack
+  category: ATK 7, DEF 6
+  description: 'WARRIOR / NORMAL: Decentralized swarm fighting censorship and corporate abuse. [ATK 7 | DEF 6]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/AnonymousCollective.png
+  image credits: Gemini/Mary
+  value: 7
+
+- id: fogqYzxEzAj3rCeSREgTmu
+  name: Linux Kernel
+  type: Attack
+  category: ATK 3, DEF 6
+  description: 'WARRIOR / NORMAL: Decentralized, open-source OS resisting corporate infiltration. [ATK 3 | DEF 6]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/LinuxKernel.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: JoXkgyPgXwrCw7YpHGi2fJ
+  name: Honeypot Server
+  type: Attack
+  category: ATK 2, DEF 6
+  description: 'WARRIOR / EFFECT: If attacked, return attacker to hand. Decoy system for surveillance. [ATK 2 | DEF 6]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/HoneypotServer.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: c2ukJGfDscH7fQJVvwQ69N
+  name: Packet Sniffer
+  type: Attack
+  category: ATK 1, DEF 3 
+  description: 'WARRIOR / EFFECT: Flip: Destroy 1 Event. Intercepts unencrypted data. [ATK 1 | DEF 3]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PacketSniffer.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: 6KZRfurUfJsiFAJYRne6YR
+  name: Rootkit Payload
+  type: Attack
+  category: ATK 1, DEF 2
+  description: 'WARRIOR / EFFECT: Flip: Destroy 1 opposing warrior. Grants hidden admin access. [ATK 1 | DEF 2]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/RootkitPayload.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: 8pM2nQxL5yZ9vB3cT7wJ4R
+  name: Phishing Exploit
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Take control of 1 opposing warrior until End Phase. Exploits human psychology.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhishingExploit.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: 5RfcAy2i8vrNy6F34gNqEH
+  name: Whistleblower Data Dump
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Both players discard hands and draw same number. Makes secrets public.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/WhistleblowerDataDump.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: bn5CMye68FCSFps3ai8jqH
+  name: Tor Network Routing
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Take 0 LP damage this turn. Warriors cannot be destroyed by battle. Provides anonymity.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TorNetworkRouting.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: 7z7n8WZLSTSZtpqRJ2GRYp
+  name: Cult of the Dead Cow (cDc)
+  type: Attack
+  category: ATK 6, DEF 4
+  description: 'WARRIOR / NORMAL: Legacy hacker group that pioneered hacktivism. [ATK 6 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/CultoftheDeadCow.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: guHRm8dxQTm2NHxRkfU5PT
+  name: Chelsea Manning
+  type: Attack
+  category: ATK 4, DEF 5
+  description: 'WARRIOR / EFFECT: When destroyed: add 1 Technique from deck to hand. Historic 2010 leak. [ATK 4 | DEF 5]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ChelseaManning.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: Dy9uW462F7NMTsQFCiPyUt
+  name: Chaos Computer Club (CCC)
+  type: Attack
+  category: ATK 4, DEF 4
+  description: 'WARRIOR / NORMAL: European hacker association advocating for free info. [ATK 4 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/ChaosComputerClub.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: caMWgQtCx98ysigY6mFJJQ
+  name: Blue Box
+  type: Attack
+  category: ATK 3, DEF 2
+  description: 'WARRIOR / NORMAL: Phreaking device used to manipulate telephone routing. [ATK 3 | DEF 2]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BlueBox.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: MUtA5f3B3y7V2TFjAEg8C5
+  name: LulzSec
+  type: Attack
+  category: ATK 5, DEF 2
+  description: 'WARRIOR / NORMAL: High-profile offshoot known for rapid-fire attacks and massive disclosures. [ATK 5 | DEF 2]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/LulzSec.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: YsqbbKfFLX5oTxJueNV2Jt
+  name: The Mentor
+  type: Attack
+  category: ATK 5, DEF 4
+  description: 'WARRIOR / EFFECT: While Upright: Hacktivists gain 1 ATK. Author of the Hacker Manifesto. [ATK 5 | DEF 4]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/TheMentor.png
+  image credits: Gemini/Mary
+  value: 4
+
+- id: je62mcjG7RoQovo2SFEHHz
+  name: Phrack Staff
+  type: Attack
+  category: ATK 3, DEF 5
+  description: 'WARRIOR / NORMAL: Maintained underground circulation of forbidden technical knowledge. [ATK 3 | DEF 5]'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PhrackStaff.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: nKzQo6exNeaf3XaubvCVhc
+  name: SQL Injection
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Target and destroy 1 warrior. Exploits poor database coding.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SQLInjection.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: EKoUqY4F4aFrzgs9mVHw7k
+  name: Mirror Site
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Return 1 controlled warrior to hand, then summon 1 from hand. Bypasses censorship.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/MirrorSite.png
+  image credits: Gemini/Mary
+  value: 1
+
+- id: 4UD9tAaCirmuGJvQXrGCUz
+  name: Back Orifice
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Change 1 Sideways warrior to Upright. Exposed severe Windows vulnerabilities.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/BackOrifice.png
+  image credits: Gemini/Mary
+  value: 3
+
+- id: HpAFEoVNo4PKFrwTtKDjn3
+  name: Social Engineering Pretext
+  type: Skill
+  category: ATK N/A, DEF N/A
+  description: 'TECHNIQUE / SPELL: Look at opponent’s hand and discard 1 card. Fabricated scenario tactic.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SocialEngineeringPretext.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: N3AGFicAn27asGJvFi5E3X
+  name: Public Backlash
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: When taking LP damage: opponent takes equal damage. Outrage following whistleblowing.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/PublicBacklash.png
+  image credits: Gemini/Mary
+  value: 2
+
+- id: VEYhj2Fs9Bs9JGRt5dikrc
+  name: System Overload
+  type: Defense
+  category: ATK N/A, DEF N/A
+  description: 'EVENT / TRAP: Negate attack and destroy attacker. DDoS campaigns paralyzing infrastructure.'
+  image: https://raw.githubusercontent.com/mbriamon/arch-of-hacking/main/infosec-deck/doc/images/SystemOverload.png
+  image credits: Gemini/Mary
+  value: 3
