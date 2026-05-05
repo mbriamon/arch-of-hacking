@@ -172,12 +172,12 @@
             %\textit{\glqq\normalsize #1\grqq}
             %\textit{\glqq\small#1\grqq}
             %\textit{normalsize #1}
-            \textit{\small#1}
+            \textit{\sciptsize #1}
         };
         \node[below right, text width=(\cardwidth-2*\strippadding-\stripwidth-2*\textpadding-0.3)*1cm] at (2*\strippadding+\stripwidth+\textpadding,3) {
             %\vrule width \textwidth height 2pt \\[-2pt]
             \vspace{0.2cm}
-            {\scriptsize #2}
+            {\tiny#2}
         };
     \end{scope}
 }
